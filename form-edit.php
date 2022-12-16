@@ -27,6 +27,8 @@ if( mysqli_num_rows($query) < 1 ){
 <html>
 <head>
     <title>Formulir Edit Siswa | SMK Coding</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:Regular,Bold">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -51,8 +53,10 @@ if( mysqli_num_rows($query) < 1 ){
         <p>
             <label for="jenis_kelamin">Jenis Kelamin: </label>
             <?php $jk = $siswa['jenis_kelamin']; ?>
-            <label><input type="radio" name="jenis_kelamin" value="laki-laki" <?php echo ($jk == 'laki-laki') ? "checked": "" ?>> Laki-laki</label>
-            <label><input type="radio" name="jenis_kelamin" value="perempuan" <?php echo ($jk == 'perempuan') ? "checked": "" ?>> Perempuan</label>
+            <span>
+            <label><input type="radio" name="jenis_kelamin" value="laki-laki" <?php echo ($jk == 'laki-laki') ? "checked": "" ?> /> Laki-laki</label>
+            <label><input type="radio" name="jenis_kelamin" value="perempuan" <?php echo ($jk == 'perempuan') ? "checked": "" ?> /> Perempuan</label>
+            </span>
         </p>
         <p>
             <label for="agama">Agama: </label>
@@ -70,7 +74,7 @@ if( mysqli_num_rows($query) < 1 ){
             <input type="text" name="sekolah_asal" placeholder="nama sekolah" value="<?php echo $siswa['sekolah_asal'] ?>" />
         </p>
         <p>
-            <input type="submit" value="Simpan" name="simpan" />
+            <input id="edit-simpan" type="submit" value="Simpan" name="simpan" />
         </p>
 
         </fieldset>

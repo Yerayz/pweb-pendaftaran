@@ -4,6 +4,8 @@
 <html>
 <head>
     <title>Pendaftaran Siswa Baru | SMK Coding</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:Regular,Bold">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -12,12 +14,12 @@
     </header>
 
     <nav>
-        <a href="form-daftar.php">[+] Tambah Baru</a>
+        <a id="list-tambah" href="form-daftar.php">Tambah Baru</a>
     </nav>
 
     <br>
 
-    <table border="1">
+    <table>
     <thead>
         <tr>
             <th>No</th>
